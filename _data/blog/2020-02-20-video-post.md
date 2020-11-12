@@ -3,7 +3,7 @@ template: BlogPost
 path: /video-post
 date: 2020-02-20T15:05:49.332Z
 title: Post with Youtube Video embed
-tags: ["animals", "Chicago", "zoos"]
+tags: ['animals', 'Chicago', 'zoos']
 thumbnail: /assets/image-1.jpg
 metaDescription: Meta description for Hello World
 ---
