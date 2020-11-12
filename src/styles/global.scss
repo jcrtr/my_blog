@@ -64,6 +64,9 @@ a {
     text-decoration: underline;
   }
 }
+.content{
+  max-width: 100%;
+}
 .site-wrapper {
   padding: 32px;
   max-width: 1140px;
@@ -252,6 +255,11 @@ a {
   color: var(--text-secondary-color);
 }
 .site-footer {
+  text-align: center;
+  max-width: 100%;
+}
+.content-footer {
+  padding: 32px;
   text-align: center;
   margin: 90px 0 16px;
   color: #666;
