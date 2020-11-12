@@ -28,12 +28,8 @@ export default ({ children }) => {
       </div>
       <footer className="site-footer">
         <div className="content-footer">
-          <p>
-            &copy; {new Date().getFullYear()}&bull;{" "}
-            <span role="img" aria-label="love">
-              ❤️
-            </span>{" "}
-            likiblack
+          <p>&copy; {new Date().getFullYear()}&bull;{" "}
+            <span role="img" aria-label="love">❤️</span>{" "}likiblack
           </p>
         </div>
       </footer>
