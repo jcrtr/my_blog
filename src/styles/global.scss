@@ -29,7 +29,7 @@ body.light {
   --input-bg: var(--background);
 }
 body.dark {
-  --primary-color: #9984d5;
+  --primary-color: #381696;
   --primary-text-color: #fff;
   --featured-bg: #66578d;
   --featured-text: #fff;
@@ -255,7 +255,7 @@ a {
   color: var(--text-secondary-color);
 }
 .site-footer {
-  background-image: url(/images/wave.svg);
+  background-image: url(/assets/wave.svg);
   text-align: center;
   max-width: 100%;
 }
