@@ -3,7 +3,7 @@ template: BlogPost
 path: /fillerama
 date: 2020-02-20T14:59:36.571Z
 title: Dummy Content from Fillerama
-tags: ["animals", "Chicago", "zoos"] 
+tags: ['animals', 'Chicago', 'zoos']
 thumbnail: /assets/image-5.jpg
 metaDescription: Meta description for Hello World
 ---
