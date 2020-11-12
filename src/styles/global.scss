@@ -113,6 +113,16 @@ a {
   padding: 0 0 64px;
   max-width: 980px;
 }
+.blink {
+  display: inline-block;
+  width: 10px;
+  height: 1rem;
+  background: #fe5186;
+  margin-left: 5px;
+  border-radius: 1px;
+  -webkit-animation: header-module--cursor--33Aoa 1s infinite;
+  animation: blink 2s step-start 0s infinite;
+}
 .headline {
   font-size: 36px;
   font-weight: 900;
@@ -193,6 +203,7 @@ a {
   position: relative;
   padding: 18px;
   margin: 0 auto;
+  margin-bottom: 50px;
   overflow: hidden;
   &:before {
     content: "";
