@@ -23,6 +23,7 @@ export default function Template({
             <div className="post-thumbnail">
               <h1 className="post-title">{frontmatter.title}</h1>
               <div className="post-meta">{frontmatter.date}</div>
+              <div className="post-meta">{frontmatter.tags}</div>
             </div>
           )}
           {!!frontmatter.thumbnail && (
@@ -64,4 +65,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
