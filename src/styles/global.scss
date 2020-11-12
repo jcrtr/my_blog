@@ -120,8 +120,14 @@ a {
   background: #fe5186;
   margin-left: 5px;
   border-radius: 1px;
-  -webkit-animation: header-module--cursor--33Aoa 1s infinite;
+  -webkit-animation: blink 1s step-start 0s infinite;
   animation: blink 2s step-start 0s infinite;
+}
+@keyframes blink {
+  50% { opacity: 0.0; }
+}
+@-webkit-keyframes blink {
+  50% { opacity: 0.0; }
 }
 .headline {
   font-size: 36px;

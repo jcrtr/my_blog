@@ -19,9 +19,11 @@ export default ({ children }) => {
     <div className="content">
       <div className="site-wrapper">
         <header className="site-header">
+          <span className="site-title">> </span>
           <div className="site-title">
             <Link to="/">{data.site.siteMetadata.title}</Link>
           </div>
+          <div className="blink"></div>
           <Navigation />
         </header>
         {children}
