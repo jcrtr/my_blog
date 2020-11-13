@@ -20,7 +20,6 @@ export default ({ children }) => {
       <div className="site-wrapper">
         <header className="site-header">
           <div className="site-title">
-            <Link to="/">> </Link>
             <Link to="/">{data.site.siteMetadata.title}</Link>
             <Link className="blink" to="/"></Link>
           </div>

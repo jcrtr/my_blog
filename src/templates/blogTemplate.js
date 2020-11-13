@@ -1,6 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 
 export default function Template({
@@ -17,6 +17,9 @@ export default function Template({
         </title>
         <meta name="description" content={frontmatter.metaDescription} />
       </Helmet>
+      <div>
+        <Link className="back button -primary" to="/">&larr; Назад</Link>
+      </div>
       <div className="blog-post-container">
         <article className="post">
           {!frontmatter.thumbnail && (
@@ -33,13 +36,20 @@ export default function Template({
             >
               <h1 className="post-title">{frontmatter.title}</h1>
               <div className="post-meta">{frontmatter.date}</div>
-              <div className="post-meta">{frontmatter.tags}</div>
             </div>
           )}
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
+          <div className="tags">
+            {frontmatter.tags.map((tag, i) => [
+              <strong className="button -primary" key={i}>
+                #{tag}
+                {i < frontmatter.tags.length - 1 ? "" : ""}
+              </strong>,
+            ])}
+          </div>
         </article>
       </div>
     </Layout>
@@ -65,4 +75,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
