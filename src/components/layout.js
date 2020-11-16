@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import Navigation from "../components/navigation";
 import "prismjs/themes/prism-okaidia.css";
+import Subscribe from "./subscribeForm"
 
 export default ({ children }) => {
   const data = useStaticQuery(
@@ -27,10 +28,17 @@ export default ({ children }) => {
         </header>
         {children}
       </div>
-      <footer className="site-footer">
+      <div className="footer-banner">
+        <Subscribe/>
+      </div>
+      <footer className="footer">
         <div className="content-footer">
-          <p>&copy; {new Date().getFullYear()}{" "}
-            <span role="img" aria-label="love">❤️</span>{" "}likiblack
+          <p>
+            &copy; {new Date().getFullYear()}{" "}
+            <span role="img" aria-label="love">
+              ❤️
+            </span>{" "}
+            likiblack
           </p>
         </div>
       </footer>

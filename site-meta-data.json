@@ -1,5 +1,7 @@
 {
   "title": "CoffeeCode",
+  "url": "https://caffeecode.gq",
+  "twitterHandle": "@stillsey",
   "siteUrl": "https://delog-w3layouts.netlify.com/",
   "description": "Delog, a GatsbyJS and Netlify CMS starter for Designers and Developers",
   "home": {

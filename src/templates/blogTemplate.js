@@ -2,6 +2,8 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
+import Share from '../components/share';
+
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -16,9 +18,17 @@ export default function Template({
           {frontmatter.title} | {siteMetadata.title}
         </title>
         <meta name="description" content={frontmatter.metaDescription} />
+
+        <meta property="og:url" content={`${siteMetadata.url}${frontmatter.path}`}/>
+        <meta property="og:title" content={`${siteMetadata.title} | ${frontmatter.title}`}/>
+        <meta property="og:image" content={frontmatter.thumbnail}/>
+
+        <meta name="twitter:card" content={frontmatter.thumbnail}/>
+        <meta name="twitter:title" content={`${siteMetadata.title} | ${frontmatter.title}`}/>
+        <meta name="twitter:image" content={frontmatter.thumbnail}/>
       </Helmet>
       <div>
-        <Link className="back button -primary" to="/">&larr; Назад</Link>
+        <Link className="back button -primary" to="/">&larr;</Link>
       </div>
       <div className="blog-post-container">
         <article className="post">
@@ -50,6 +60,9 @@ export default function Template({
               </strong>,
             ])}
           </div>
+          <div>
+            <Share twitterHandle={siteMetadata.twitterHandle} url={`${siteMetadata.url}${frontmatter.path}`} title={frontmatter.title} tags={frontmatter.tags} />
+          </div>
         </article>
       </div>
     </Layout>
@@ -61,6 +74,8 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        url
+        twitterHandle
       }
     }
     markdownRemark(frontmatter: { path: { eq: $path } }) {
