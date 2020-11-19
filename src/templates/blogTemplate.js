@@ -2,8 +2,8 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
-import Share from '../components/share';
-
+import Share from "../components/share";
+import Subscribe from "../components/subscribeForm";
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -60,9 +60,8 @@ export default function Template({
               </strong>,
             ])}
           </div>
-          <div>
-            <Share twitterHandle={siteMetadata.twitterHandle} url={`${siteMetadata.url}${frontmatter.path}`} title={frontmatter.title} tags={frontmatter.tags} />
-          </div>
+          <Share twitterHandle={siteMetadata.twitterHandle} url={`${siteMetadata.url}${frontmatter.path}`} title={frontmatter.title} tags={frontmatter.tags} />
+          <Subscribe />
         </article>
       </div>
     </Layout>
